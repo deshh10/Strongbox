@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="axelp"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-11-06 04:23:10 "/>
+        <attribute name="created" value="YXhlbHA7TEFQVE9QLUI0UjBCSUNCOzIwMjMtMTEtMDQ7IjAxOjE5OjMxICI7Mjc1MA=="/>
+        <attribute name="edited" value="YXhlbHA7TEFQVE9QLUI0UjBCSUNCOzIwMjMtMTEtMDY7IjA0OjIzOjEwICI7NDsyODU4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="reponse" type="Integer" array="False" size=""/>
+            <declare name="etat" type="Boolean" array="False" size=""/>
+            <output expression="&quot;Quel est le projet du MI7 ?&quot;" newline="True"/>
+            <output expression="&quot;1 &gt;&gt; MI7 Security&quot;" newline="True"/>
+            <output expression="&quot;2 &gt;&gt; Strongbox 2.0&quot;" newline="True"/>
+            <output expression="&quot;3 &gt;&gt; StrongBox 3000&quot;" newline="True"/>
+            <output expression="&quot;4 &gt;&gt; Agent Double&quot;" newline="True"/>
+            <input variable="reponse"/>
+            <if expression="reponse == 3">
+                <then>
+                    <comment text="Si l'utilisateur &#224; la bonne r&#233;ponse alors il peut passer &#224; la question suivante"/>
+                    <output expression="&quot;[Niveau 1] &gt;&gt; R&#233;ussi&quot;" newline="True"/>
+                    <output expression="&quot;Quel est le nom de notre &#233;cole ?&quot;" newline="True"/>
+                    <output expression="&quot;1 &gt;&gt; ESILV&quot;" newline="True"/>
+                    <output expression="&quot;2 &gt;&gt; ECE&quot;" newline="True"/>
+                    <output expression="&quot;3 &gt;&gt; EMLV&quot;" newline="True"/>
+                    <output expression="&quot;4 &gt;&gt; CESI&quot;" newline="True"/>
+                    <input variable="reponse"/>
+                    <if expression="reponse == 4">
+                        <then>
+                            <output expression="&quot;[Niveau 2] &gt;&gt; Acc&#232;s r&#233;ussi&quot;" newline="True"/>
+                            <output expression="&quot;Quel est le nom de la promotion de cette ann&#233;e&quot;" newline="True"/>
+                            <output expression="&quot;1 &gt;&gt; CPI A1&quot;" newline="True"/>
+                            <output expression="&quot;2 &gt;&gt; CPI A2&quot;" newline="True"/>
+                            <input variable="reponse"/>
+                            <if expression="reponse == 1">
+                                <then>
+                                    <output expression="&quot;[Niveau 3] &gt;&gt; R&#233;ussi&quot;" newline="True"/>
+                                    <output expression="&quot;Vous pouvez passer au prochain niveau de s&#233;curit&#233;&quot;" newline="True"/>
+                                    <assign variable="etat" expression="True"/>
+                                </then>
+                                <else>
+                                    <output expression="&quot;Acc&#232;s refus&#233;&quot;" newline="True"/>
+                                    <assign variable="etat" expression="False"/>
+                                </else>
+                            </if>
+                        </then>
+                        <else>
+                            <output expression="&quot;Acc&#232;s refus&#233;&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <comment text="Si la r&#233;ponse &#224; la question n'est pas correcte alors l'acc&#232;s &#224; la question suivante est r&#233;fus&#233; et l'algorithme s'arr&#234;te"/>
+                    <output expression="&quot;Acc&#232;s refus&#233;&quot;" newline="True"/>
+                    <assign variable="etat" expression="False"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

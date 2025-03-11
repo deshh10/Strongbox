@@ -1,0 +1,196 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="tomso"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-11-06 03:11:51 "/>
+        <attribute name="created" value="dG9tc287TEFQVE9QLUNSVDNQOTQzOzIwMjMtMTEtMDI7IjEyOjIyOjQyICI7Mjc3NA=="/>
+        <attribute name="edited" value="dG9tc287TEFQVE9QLUNSVDNQOTQzOzIwMjMtMTEtMDI7IjEyOjMxOjA5ICI7MTsyODg1"/>
+        <attribute name="edited" value="S0MgVFJJQk9SRDtERVNLVE9QLU01R1A0VUE7MjAyMy0xMS0wNjsiMDI6MTY6MjQgIjs1O0tDIFRSSUJPUkQ7REVTS1RPUC1NNUdQNFVBOzIwMjMtMTEtMDM7IjA2OjQ2OjU4ICI7UFJJTkNQQUwuZnByZzs3MjM3"/>
+        <attribute name="edited" value="S0MgVFJJQk9SRDtERVNLVE9QLU01R1A0VUE7MjAyMy0xMS0wNjsiMDI6MTY6NDcgIjsxMjszMTIy"/>
+        <attribute name="edited" value="UkRpbmZvO0RFU0tUT1AtR1BDRzcwOTsyMDIzLTExLTA2OyIwMjo1OTowNiAiOzI7MjkxMQ=="/>
+        <attribute name="edited" value="YXhlbHA7TEFQVE9QLUI0UjBCSUNCOzIwMjMtMTEtMDY7IjAzOjExOjUxICI7MTsyODU2"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="ouverture" type="Boolean" array="False" size=""/>
+            <assign variable="ouverture" expression="False"/>
+            <declare name="Magent" type="Integer" array="False" size=""/>
+            <assign variable="Magent" expression="0"/>
+            <declare name="clePublique, M, Mp, C" type="Integer" array="False" size=""/>
+            <declare name="nomAgent" type="String" array="False" size=""/>
+            <output expression="&quot; Veuillez-vous identifiez &quot;" newline="True"/>
+            <input variable="nomAgent"/>
+            <assign variable="M" expression="Random(2881)"/>
+            <assign variable="clePublique" expression="CleAgent(nomAgent)"/>
+            <assign variable="C" expression="Chiffrer(M,clePublique)"/>
+            <while expression="M != Magent">
+                <output expression="&quot; Message &#224; d&#233;chiffrer &quot;" newline="True"/>
+                <output expression="C" newline="True"/>
+                <input variable="Magent"/>
+            </while>
+            <output expression="&quot;Authentification autorisee&quot;" newline="True"/>
+            <assign variable="ouverture" expression="True"/>
+        </body>
+    </function>
+    <function name="Chiffrer" type="Integer" variable="chiffre">
+        <parameters>
+            <parameter name="nombreRand" type="Integer" array="False"/>
+            <parameter name="cle" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="n, chiffre" type="Integer" array="False" size=""/>
+            <assign variable="n" expression="43 * 67"/>
+            <assign variable="chiffre" expression="Modexp(nombreRand,cle,n)"/>
+        </body>
+    </function>
+    <function name="CleAgent" type="Integer" variable="cle">
+        <parameters>
+            <parameter name="CleAgent" type="String" array="False"/>
+        </parameters>
+        <body>
+            <declare name="cle" type="Integer" array="False" size=""/>
+            <if expression="CleAgent == &quot;A&quot;">
+                <then>
+                    <assign variable="cle" expression="601"/>
+                </then>
+                <else>
+                    <if expression="CleAgent == &quot;B&quot;">
+                        <then>
+                            <assign variable="cle" expression="619"/>
+                        </then>
+                        <else>
+                            <if expression="CleAgent == &quot;C&quot;">
+                                <then>
+                                    <assign variable="cle" expression="631"/>
+                                </then>
+                                <else>
+                                    <if expression="CleAgent == &quot;D&quot;">
+                                        <then>
+                                            <assign variable="cle" expression="641"/>
+                                        </then>
+                                        <else>
+                                            <if expression="CleAgent == &quot;E&quot;">
+                                                <then>
+                                                    <assign variable="cle" expression="647"/>
+                                                </then>
+                                                <else>
+                                                    <if expression="CleAgent == &quot;F&quot;">
+                                                        <then>
+                                                            <assign variable="cle" expression="653"/>
+                                                        </then>
+                                                        <else>
+                                                            <if expression="CleAgent == &quot;H&quot;">
+                                                                <then>
+                                                                    <assign variable="cle" expression="661"/>
+                                                                </then>
+                                                                <else>
+                                                                    <if expression="CleAgent == &quot;I&quot;">
+                                                                        <then>
+                                                                            <assign variable="cle" expression="673"/>
+                                                                        </then>
+                                                                        <else>
+                                                                            <if expression="CleAgent == &quot;J&quot;">
+                                                                                <then>
+                                                                                    <assign variable="cle" expression="691"/>
+                                                                                </then>
+                                                                                <else>
+                                                                                    <if expression="CleAgent == &quot;K&quot;">
+                                                                                        <then>
+                                                                                            <assign variable="cle" expression="701"/>
+                                                                                        </then>
+                                                                                        <else>
+                                                                                            <if expression="CleAgent == &quot;L&quot;">
+                                                                                                <then>
+                                                                                                    <assign variable="cle" expression="733"/>
+                                                                                                </then>
+                                                                                                <else>
+                                                                                                    <if expression="CleAgent == &quot;M&quot;">
+                                                                                                        <then>
+                                                                                                            <assign variable="cle" expression="739"/>
+                                                                                                        </then>
+                                                                                                        <else>
+                                                                                                            <if expression="CleAgent == &quot;N&quot;">
+                                                                                                                <then>
+                                                                                                                    <assign variable="cle" expression="751"/>
+                                                                                                                </then>
+                                                                                                                <else>
+                                                                                                                    <if expression="CleAgent == &quot;O&quot;">
+                                                                                                                        <then>
+                                                                                                                            <assign variable="cle" expression="797"/>
+                                                                                                                        </then>
+                                                                                                                        <else>
+                                                                                                                            <if expression="CleAgent == &quot;P&quot;">
+                                                                                                                                <then>
+                                                                                                                                    <assign variable="cle" expression="809"/>
+                                                                                                                                </then>
+                                                                                                                                <else>
+                                                                                                                                    <if expression="CleAgent == &quot;Q&quot;">
+                                                                                                                                        <then>
+                                                                                                                                            <assign variable="cle" expression="811"/>
+                                                                                                                                        </then>
+                                                                                                                                        <else/>
+                                                                                                                                    </if>
+                                                                                                                                </else>
+                                                                                                                            </if>
+                                                                                                                        </else>
+                                                                                                                    </if>
+                                                                                                                </else>
+                                                                                                            </if>
+                                                                                                        </else>
+                                                                                                    </if>
+                                                                                                </else>
+                                                                                            </if>
+                                                                                        </else>
+                                                                                    </if>
+                                                                                </else>
+                                                                            </if>
+                                                                        </else>
+                                                                    </if>
+                                                                </else>
+                                                            </if>
+                                                        </else>
+                                                    </if>
+                                                </else>
+                                            </if>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+    <function name="Modexp" type="Integer" variable="r">
+        <parameters>
+            <parameter name="a" type="Integer" array="False"/>
+            <parameter name="clePublique" type="Integer" array="False"/>
+            <parameter name="n" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="r" type="Integer" array="False" size=""/>
+            <if expression="clePublique &lt; 0">
+                <then>
+                    <call expression="exit(-1)"/>
+                </then>
+                <else/>
+            </if>
+            <if expression="(a == 0 || n == 1)">
+                <then>
+                    <assign variable="r" expression="0"/>
+                </then>
+                <else>
+                    <assign variable="r" expression="1"/>
+                    <while expression="clePublique &gt; 0">
+                        <assign variable="r" expression="(r * (a mod n)) mod n"/>
+                        <assign variable="clePublique" expression="clePublique - 1"/>
+                    </while>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

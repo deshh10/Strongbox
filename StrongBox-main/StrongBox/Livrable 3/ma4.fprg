@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="axelp"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-11-06 11:11:44 "/>
+        <attribute name="created" value="YXhlbHA7TEFQVE9QLUI0UjBCSUNCOzIwMjMtMTEtMDQ7IjAxOjEwOjIwICI7MjczOQ=="/>
+        <attribute name="edited" value="YXhlbHA7TEFQVE9QLUI0UjBCSUNCOzIwMjMtMTEtMDY7IjExOjExOjQ0ICI7MjsyODU4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="scanDigital" type="Boolean" array="False" size=""/>
+            <input variable="scanDigital"/>
+            <if expression="scanDigital == True">
+                <then>
+                    <comment text="V&#233;rifies si le scan digital est correct"/>
+                    <output expression="&quot;Scan digital reconnu&quot;" newline="True"/>
+                    <output expression="&quot;Vous pouvez passer au prochain niveau de s&#233;curit&#233;&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;[Erreur] &gt;&gt; Scan digital non reconnu&quot;" newline="True"/>
+                    <breakpoint expression="" always="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

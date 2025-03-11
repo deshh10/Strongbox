@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="paulm"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-11-06 02:38:44 "/>
+        <attribute name="created" value="cGF1bG07UEFVTDsyMDIzLTEwLTE3OyIwMzoxMzoyNSAiOzIwMzQ="/>
+        <attribute name="edited" value="cGF1bG07UEFVTDsyMDIzLTExLTAzOyIwNzoyMDozMyAiOzI7MjE0MA=="/>
+        <attribute name="edited" value="YXhlbHA7TEFQVE9QLUI0UjBCSUNCOzIwMjMtMTEtMDY7IjAyOjM4OjQ0ICI7NDsyODY5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="x" type="Integer" array="False" size=""/>
+            <assign variable="x" expression="Code()"/>
+            <if expression="x &lt; 3">
+                <then>
+                    <output expression="&quot;Groupe 1&quot;" newline="True"/>
+                </then>
+                <else>
+                    <if expression="x &lt; 6">
+                        <then>
+                            <output expression="&quot;Groupe 2&quot;" newline="True"/>
+                        </then>
+                        <else/>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+    <function name="Code" type="Integer" variable="Groupe">
+        <parameters/>
+        <body>
+            <declare name="Groupe" type="Integer" array="False" size=""/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <assign variable="i" expression="0"/>
+            <declare name="Code" type="String" array="True" size="5"/>
+            <assign variable="Code[0]" expression="&quot;A1258&quot;"/>
+            <assign variable="Code[1]" expression="&quot;B2865&quot;"/>
+            <assign variable="Code[2]" expression="&quot;C1658&quot;"/>
+            <assign variable="Code[3]" expression="&quot;D1100&quot;"/>
+            <assign variable="Code[4]" expression="&quot;E0101&quot;"/>
+            <assign variable="Code[5]" expression="&quot;F0110&quot;"/>
+            <assign variable="Code[6]" expression="&quot;G0111&quot;"/>
+            <assign variable="Code[7]" expression="&quot;H1000&quot;"/>
+            <assign variable="Code[8]" expression="&quot;I1001&quot;"/>
+            <assign variable="Code[9]" expression="&quot;K1010&quot;"/>
+            <assign variable="Code[10]" expression="&quot;L1011&quot;"/>
+            <assign variable="Code[11]" expression="&quot;M1100&quot;"/>
+            <assign variable="Code[12]" expression="&quot;N1101&quot;"/>
+            <assign variable="Code[13]" expression="&quot;O1835&quot;"/>
+            <assign variable="Code[14]" expression="&quot;P8563&quot;"/>
+            <assign variable="Code[15]" expression="&quot;Q7569&quot;"/>
+            <declare name="Trouv&#233;" type="Boolean" array="False" size=""/>
+            <declare name="ATrouv&#233;" type="String" array="False" size=""/>
+            <output expression="&quot;Entrez votre lettre et code d'agent&quot;" newline="True"/>
+            <input variable="ATrouv&#233;"/>
+            <assign variable="Trouv&#233;" expression="False"/>
+            <while expression="Trouv&#233; != True">
+                <declare name="Compteur" type="Integer" array="False" size=""/>
+                <for variable="Compteur" start="4" end="0" direction="dec" step="1">
+                    <if expression="Code[Compteur] == ATrouv&#233;">
+                        <then>
+                            <output expression="&quot;Trouv&#233; &#224; la position : &quot; + Compteur" newline="True"/>
+                            <assign variable="Trouv&#233;" expression="True"/>
+                            <assign variable="Groupe" expression="Compteur"/>
+                        </then>
+                        <else/>
+                    </if>
+                </for>
+            </while>
+        </body>
+    </function>
+</flowgorithm>

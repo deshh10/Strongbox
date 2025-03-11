@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="axelp"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-11-06 11:10:55 "/>
+        <attribute name="created" value="YXhlbHA7TEFQVE9QLUI0UjBCSUNCOzIwMjMtMTEtMDQ7IjEyOjQ0OjU5ICI7Mjc2MA=="/>
+        <attribute name="edited" value="YXhlbHA7TEFQVE9QLUI0UjBCSUNCOzIwMjMtMTEtMDY7IjExOjEwOjU1ICI7MjsyODU5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="scanEyes" type="Boolean" array="False" size=""/>
+            <input variable="scanEyes"/>
+            <if expression="scanEyes == True">
+                <then>
+                    <comment text="V&#233;rifies si le scan r&#233;tinien est correct"/>
+                    <output expression="&quot;Scan r&#233;tinien reconnu&quot;" newline="True"/>
+                    <output expression="&quot;Vous pouvez passer au prochain niveau de s&#233;curit&#233;&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;[Erreur] &gt;&gt; Scan r&#233;tinien non reconnu&quot;" newline="True"/>
+                    <breakpoint expression="" always="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,8 @@
+Questionable use of curly braces in "r1 n013 n012 10k pwr={e}"
+    Error: undefined symbol in: "[e]"
+Circuit: * C:\Users\axelp\OneDrive\Bureau\CESI - BLOC\BLOC - ELECTRONIQUE\StrongBox\Livrable 2\Carte LTSPICE (1001).asc
+
+Warning: Multiple definitions of model "2scr375p" Type: BJT
+Warning: Multiple definitions of model "bc857b" Type: BJT
+Warning: Multiple definitions of model "bc847c" Type: BJT
+Warning: Multiple definitions of model "bc847b" Type: BJT

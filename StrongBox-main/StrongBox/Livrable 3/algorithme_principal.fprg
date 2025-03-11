@@ -1,0 +1,436 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="RDinfo"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-11-06 04:20:16 "/>
+        <attribute name="created" value="UkRpbmZvO0RFU0tUT1AtR1BDRzcwOTsyMDIzLTExLTAyOyIxMToxMzo1NyAiOzI3OTQ="/>
+        <attribute name="edited" value="UkRpbmZvO0RFU0tUT1AtR1BDRzcwOTsyMDIzLTExLTA2OyIwMjowMDowOSAiOzM7UkRpbmZvO0RFU0tUT1AtR1BDRzcwOTsyMDIzLTExLTA0OyIwMjo0MTo0MyAiO21hMiAoMikuZnByZzs2NzA3"/>
+        <attribute name="edited" value="UkRpbmZvO0RFU0tUT1AtR1BDRzcwOTsyMDIzLTExLTA2OyIwMjoxNToyNSAiOzExOzI5NTI="/>
+        <attribute name="edited" value="YXhlbHA7TEFQVE9QLUI0UjBCSUNCOzIwMjMtMTEtMDY7IjAyOjM5OjE4ICI7MTtwYXVsbTtQQVVMOzIwMjMtMTAtMTc7IjAzOjEzOjI1ICI7bWE1LmZwcmc7NTc1Ng=="/>
+        <attribute name="edited" value="YXhlbHA7TEFQVE9QLUI0UjBCSUNCOzIwMjMtMTEtMDY7IjAzOjEyOjI5ICI7Mjt0b21zbztMQVBUT1AtQ1JUM1A5NDM7MjAyMy0xMS0wMjsiMTI6MjI6NDIgIjttYTIuZnByZzs2NDg4"/>
+        <attribute name="edited" value="YXhlbHA7TEFQVE9QLUI0UjBCSUNCOzIwMjMtMTEtMDY7IjA0OjIwOjE2ICI7MjA7MjkwNw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="grp" type="Integer" array="False" size=""/>
+            <assign variable="grp" expression="MA5()"/>
+            <if expression="grp &lt; 3">
+                <then>
+                    <output expression="&quot;Vous appartenez au Groupe 1, vous allez donc passer le niveau de s&#233;curit&#233; 1&quot;" newline="True"/>
+                    <if expression="(MA1()==True) &amp;&amp; (MA3()==True)">
+                        <then>
+                            <output expression="&quot;[Niveau S&#233;curit&#233; 1] &gt;&gt; R&#233;ussi&quot;" newline="True"/>
+                            <output expression="&quot;Coffre Ouvert !&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;[Niveau S&#233;curit&#233; 1] &gt;&gt; Erreur&quot;" newline="True"/>
+                            <output expression="&quot;Destruction du coffre&quot;" newline="True"/>
+                            <breakpoint expression="" always="True"/>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <if expression="grp &lt; 6">
+                        <then>
+                            <output expression="&quot;Vous appartenez au Groupe 2, vous allez donc passer le niveau de s&#233;curit&#233; 2&quot;" newline="True"/>
+                            <if expression="(MA1() == True) &amp;&amp; (MA4() == True)">
+                                <then>
+                                    <output expression="&quot;[Niveau de securite 2] &gt;&gt; R&#233;ussi&quot;" newline="True"/>
+                                    <output expression="&quot;Coffre ouvert !&quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <output expression="&quot;[Niveau S&#233;curit&#233; 2] &gt;&gt; Erreur&quot;" newline="True"/>
+                                    <output expression="&quot;Destruction du coffre&quot;" newline="True"/>
+                                    <breakpoint expression="" always="True"/>
+                                </else>
+                            </if>
+                        </then>
+                        <else>
+                            <if expression="grp &lt; 9">
+                                <then>
+                                    <output expression="&quot;Vous appartenez au Groupe 3, vous allez donc passer le niveau de s&#233;curit&#233; 3&quot;" newline="True"/>
+                                    <if expression="(MA2() == True) &amp;&amp; (Code() == True)">
+                                        <then>
+                                            <output expression="&quot;[Niveau S&#233;curit&#233; 3] &gt;&gt; R&#233;ussi&quot;" newline="True"/>
+                                            <output expression="&quot;Coffre Ouvert !&quot;" newline="True"/>
+                                        </then>
+                                        <else>
+                                            <output expression="&quot;[Niveau S&#233;curit&#233; 3] &gt;&gt; Erreur&quot;" newline="True"/>
+                                            <output expression="&quot;Destruction du coffre&quot;" newline="True"/>
+                                            <breakpoint expression="" always="True"/>
+                                        </else>
+                                    </if>
+                                </then>
+                                <else>
+                                    <if expression="grp &lt; 12">
+                                        <then>
+                                            <output expression="&quot;Vous appartenez au Groupe 4, vous allez donc passer le niveau de s&#233;curit&#233; 4&quot;" newline="True"/>
+                                            <if expression="(MA2() == True) &amp;&amp; (MA3() == True) &amp;&amp; (MA4() == True)">
+                                                <then>
+                                                    <output expression="&quot;[Niveau S&#233;curit&#233; 4] &gt;&gt; R&#233;ussi&quot;" newline="True"/>
+                                                    <output expression="&quot;Coffre ouvert !&quot;" newline="True"/>
+                                                </then>
+                                                <else>
+                                                    <output expression="&quot;[Niveau S&#233;curit&#233; 4] &gt;&gt; Erreur&quot;" newline="True"/>
+                                                    <output expression="&quot;Destruction du coffre&quot;" newline="True"/>
+                                                    <breakpoint expression="" always="True"/>
+                                                </else>
+                                            </if>
+                                        </then>
+                                        <else>
+                                            <if expression="grp &lt; 16">
+                                                <then>
+                                                    <output expression="&quot;Vous appartenez au Groupe 5, vous allez donc passer le niveau de s&#233;curit&#233; 5&quot;" newline="True"/>
+                                                    <if expression="(MA1() == True)&amp;&amp;(MA2() == True)&amp;&amp;(MA3() == True)&amp;&amp;(MA5() == True)">
+                                                        <then>
+                                                            <output expression="&quot;[Niveau S&#233;curit&#233; 5] &gt;&gt; R&#233;ussi&quot;" newline="True"/>
+                                                            <output expression="&quot;Coffre ouvert !&quot;" newline="True"/>
+                                                        </then>
+                                                        <else>
+                                                            <output expression="&quot;[Niveau S&#233;curit&#233; 5] &gt;&gt; Erreur&quot;" newline="True"/>
+                                                            <output expression="&quot;Destruction du coffre&quot;" newline="True"/>
+                                                            <breakpoint expression="" always="True"/>
+                                                        </else>
+                                                    </if>
+                                                </then>
+                                                <else>
+                                                    <breakpoint expression="" always="True"/>
+                                                </else>
+                                            </if>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+    <function name="Chiffrer" type="Integer" variable="chiffre">
+        <parameters>
+            <parameter name="nombreRand" type="Integer" array="False"/>
+            <parameter name="cle" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="n, chiffre" type="Integer" array="False" size=""/>
+            <assign variable="n" expression="43 * 67"/>
+            <assign variable="chiffre" expression="Modexp(nombreRand,cle,n)"/>
+        </body>
+    </function>
+    <function name="CleAgent" type="Integer" variable="cle">
+        <parameters>
+            <parameter name="CleAgent" type="String" array="False"/>
+        </parameters>
+        <body>
+            <declare name="cle" type="Integer" array="False" size=""/>
+            <if expression="CleAgent == &quot;A&quot;">
+                <then>
+                    <assign variable="cle" expression="601"/>
+                </then>
+                <else>
+                    <if expression="CleAgent == &quot;B&quot;">
+                        <then>
+                            <assign variable="cle" expression="619"/>
+                        </then>
+                        <else>
+                            <if expression="CleAgent == &quot;C&quot;">
+                                <then>
+                                    <assign variable="cle" expression="631"/>
+                                </then>
+                                <else>
+                                    <if expression="CleAgent == &quot;D&quot;">
+                                        <then>
+                                            <assign variable="cle" expression="641"/>
+                                        </then>
+                                        <else>
+                                            <if expression="CleAgent == &quot;E&quot;">
+                                                <then>
+                                                    <assign variable="cle" expression="647"/>
+                                                </then>
+                                                <else>
+                                                    <if expression="CleAgent == &quot;F&quot;">
+                                                        <then>
+                                                            <assign variable="cle" expression="653"/>
+                                                        </then>
+                                                        <else>
+                                                            <if expression="CleAgent == &quot;H&quot;">
+                                                                <then>
+                                                                    <assign variable="cle" expression="661"/>
+                                                                </then>
+                                                                <else>
+                                                                    <if expression="CleAgent == &quot;I&quot;">
+                                                                        <then>
+                                                                            <assign variable="cle" expression="673"/>
+                                                                        </then>
+                                                                        <else>
+                                                                            <if expression="CleAgent == &quot;J&quot;">
+                                                                                <then>
+                                                                                    <assign variable="cle" expression="691"/>
+                                                                                </then>
+                                                                                <else>
+                                                                                    <if expression="CleAgent == &quot;K&quot;">
+                                                                                        <then>
+                                                                                            <assign variable="cle" expression="701"/>
+                                                                                        </then>
+                                                                                        <else>
+                                                                                            <if expression="CleAgent == &quot;L&quot;">
+                                                                                                <then>
+                                                                                                    <assign variable="cle" expression="733"/>
+                                                                                                </then>
+                                                                                                <else>
+                                                                                                    <if expression="CleAgent == &quot;M&quot;">
+                                                                                                        <then>
+                                                                                                            <assign variable="cle" expression="739"/>
+                                                                                                        </then>
+                                                                                                        <else>
+                                                                                                            <if expression="CleAgent == &quot;N&quot;">
+                                                                                                                <then>
+                                                                                                                    <assign variable="cle" expression="751"/>
+                                                                                                                </then>
+                                                                                                                <else>
+                                                                                                                    <if expression="CleAgent == &quot;O&quot;">
+                                                                                                                        <then>
+                                                                                                                            <assign variable="cle" expression="797"/>
+                                                                                                                        </then>
+                                                                                                                        <else>
+                                                                                                                            <if expression="CleAgent == &quot;P&quot;">
+                                                                                                                                <then>
+                                                                                                                                    <assign variable="cle" expression="809"/>
+                                                                                                                                </then>
+                                                                                                                                <else>
+                                                                                                                                    <if expression="CleAgent == &quot;Q&quot;">
+                                                                                                                                        <then>
+                                                                                                                                            <assign variable="cle" expression="811"/>
+                                                                                                                                        </then>
+                                                                                                                                        <else/>
+                                                                                                                                    </if>
+                                                                                                                                </else>
+                                                                                                                            </if>
+                                                                                                                        </else>
+                                                                                                                    </if>
+                                                                                                                </else>
+                                                                                                            </if>
+                                                                                                        </else>
+                                                                                                    </if>
+                                                                                                </else>
+                                                                                            </if>
+                                                                                        </else>
+                                                                                    </if>
+                                                                                </else>
+                                                                            </if>
+                                                                        </else>
+                                                                    </if>
+                                                                </else>
+                                                            </if>
+                                                        </else>
+                                                    </if>
+                                                </else>
+                                            </if>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+    <function name="MA5" type="Integer" variable="Groupe">
+        <parameters/>
+        <body>
+            <declare name="etat" type="Boolean" array="False" size=""/>
+            <declare name="Groupe" type="Integer" array="False" size=""/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <assign variable="i" expression="0"/>
+            <declare name="Code" type="String" array="True" size="16"/>
+            <assign variable="Code[0]" expression="&quot;A1258&quot;"/>
+            <assign variable="Code[1]" expression="&quot;B2865&quot;"/>
+            <assign variable="Code[2]" expression="&quot;C1658&quot;"/>
+            <assign variable="Code[3]" expression="&quot;D1100&quot;"/>
+            <assign variable="Code[4]" expression="&quot;E0101&quot;"/>
+            <assign variable="Code[5]" expression="&quot;F0110&quot;"/>
+            <assign variable="Code[6]" expression="&quot;G0111&quot;"/>
+            <assign variable="Code[7]" expression="&quot;H1000&quot;"/>
+            <assign variable="Code[8]" expression="&quot;I1001&quot;"/>
+            <assign variable="Code[9]" expression="&quot;K1010&quot;"/>
+            <assign variable="Code[10]" expression="&quot;L1011&quot;"/>
+            <assign variable="Code[11]" expression="&quot;M1100&quot;"/>
+            <assign variable="Code[12]" expression="&quot;N1101&quot;"/>
+            <assign variable="Code[13]" expression="&quot;O1835&quot;"/>
+            <assign variable="Code[14]" expression="&quot;P8563&quot;"/>
+            <assign variable="Code[15]" expression="&quot;Q7569&quot;"/>
+            <declare name="Trouv&#233;" type="Boolean" array="False" size=""/>
+            <declare name="ATrouv&#233;" type="String" array="False" size=""/>
+            <output expression="&quot;Entrez votre lettre et code d'agent&quot;" newline="True"/>
+            <input variable="ATrouv&#233;"/>
+            <assign variable="Trouv&#233;" expression="False"/>
+            <while expression="Trouv&#233; != True">
+                <declare name="Compteur" type="Integer" array="False" size=""/>
+                <for variable="Compteur" start="15" end="0" direction="dec" step="1">
+                    <if expression="Code[Compteur] == ATrouv&#233;">
+                        <then>
+                            <output expression="&quot;Trouv&#233; &#224; la position : &quot; &amp; Compteur" newline="True"/>
+                            <assign variable="Trouv&#233;" expression="True"/>
+                            <assign variable="Groupe" expression="Compteur"/>
+                            <assign variable="etat" expression="True"/>
+                        </then>
+                        <else/>
+                    </if>
+                </for>
+            </while>
+        </body>
+    </function>
+    <function name="MA1" type="Boolean" variable="etat">
+        <parameters/>
+        <body>
+            <declare name="reponse" type="Integer" array="False" size=""/>
+            <declare name="etat" type="Boolean" array="False" size=""/>
+            <output expression="&quot;Quel est le projet du MI7 ?&quot;" newline="True"/>
+            <output expression="&quot;1 &gt;&gt; MI7 Security&quot;" newline="True"/>
+            <output expression="&quot;2 &gt;&gt; Strongbox 2.0&quot;" newline="True"/>
+            <output expression="&quot;3 &gt;&gt; StrongBox 3000&quot;" newline="True"/>
+            <output expression="&quot;4 &gt;&gt; Agent Double&quot;" newline="True"/>
+            <input variable="reponse"/>
+            <if expression="reponse == 3">
+                <then>
+                    <comment text="Si l'utilisateur &#224; la bonne r&#233;ponse alors il peut passer &#224; la question suivante"/>
+                    <output expression="&quot;[Niveau 1] &gt;&gt; R&#233;ussi&quot;" newline="True"/>
+                    <output expression="&quot;Quel est le nom de notre &#233;cole ?&quot;" newline="True"/>
+                    <output expression="&quot;1 &gt;&gt; ESILV&quot;" newline="True"/>
+                    <output expression="&quot;2 &gt;&gt; ECE&quot;" newline="True"/>
+                    <output expression="&quot;3 &gt;&gt; EMLV&quot;" newline="True"/>
+                    <output expression="&quot;4 &gt;&gt; CESI&quot;" newline="True"/>
+                    <input variable="reponse"/>
+                    <if expression="reponse == 4">
+                        <then>
+                            <output expression="&quot;[Niveau 2] &gt;&gt; Acc&#232;s r&#233;ussi&quot;" newline="True"/>
+                            <output expression="&quot;Quel est le nom de la promotion de cette ann&#233;e&quot;" newline="True"/>
+                            <output expression="&quot;1 &gt;&gt; CPI A1&quot;" newline="True"/>
+                            <output expression="&quot;2 &gt;&gt; CPI A2&quot;" newline="True"/>
+                            <input variable="reponse"/>
+                            <if expression="reponse == 1">
+                                <then>
+                                    <output expression="&quot;[Niveau 3] &gt;&gt; R&#233;ussi&quot;" newline="True"/>
+                                    <output expression="&quot;Vous pouvez passer au prochain niveau de s&#233;curit&#233;&quot;" newline="True"/>
+                                    <assign variable="etat" expression="True"/>
+                                </then>
+                                <else>
+                                    <output expression="&quot;Acc&#232;s refus&#233;&quot;" newline="True"/>
+                                    <assign variable="etat" expression="False"/>
+                                </else>
+                            </if>
+                        </then>
+                        <else>
+                            <output expression="&quot;Acc&#232;s refus&#233;&quot;" newline="True"/>
+                            <assign variable="etat" expression="False"/>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <comment text="Si la r&#233;ponse &#224; la question n'est pas correcte alors l'acc&#232;s &#224; la question suivante est r&#233;fus&#233; et l'algorithme s'arr&#234;te"/>
+                    <output expression="&quot;Acc&#232;s refus&#233;&quot;" newline="True"/>
+                    <assign variable="etat" expression="False"/>
+                </else>
+            </if>
+        </body>
+    </function>
+    <function name="MA2" type="Boolean" variable="etat">
+        <parameters/>
+        <body>
+            <declare name="etat" type="Boolean" array="False" size=""/>
+            <declare name="ouverture" type="Boolean" array="False" size=""/>
+            <declare name="Magent" type="Integer" array="False" size=""/>
+            <assign variable="Magent" expression="0"/>
+            <declare name="clePublique, M, Mp, C" type="Integer" array="False" size=""/>
+            <declare name="nomAgent" type="String" array="False" size=""/>
+            <output expression="&quot;Veuillez vous identifier avec votre nom&quot;" newline="True"/>
+            <input variable="nomAgent"/>
+            <assign variable="M" expression="Random(2881)"/>
+            <assign variable="clePublique" expression="CleAgent(nomAgent)"/>
+            <assign variable="C" expression="Chiffrer(M,clePublique)"/>
+            <while expression="M != Magent">
+                <output expression="&quot;Message &#224; d&#233;chiffrer&quot;" newline="True"/>
+                <output expression="C" newline="True"/>
+                <input variable="Magent"/>
+            </while>
+            <output expression="&quot;Authentification R&#233;ussie&quot;" newline="True"/>
+            <assign variable="ouverture" expression="True"/>
+            <assign variable="etat" expression="True"/>
+        </body>
+    </function>
+    <function name="MA3" type="Boolean" variable="etat">
+        <parameters/>
+        <body>
+            <declare name="scanEyes" type="Boolean" array="False" size=""/>
+            <declare name="etat" type="Boolean" array="False" size=""/>
+            <output expression="&quot;Veuillez approchez votre oeil du capteur&quot;" newline="True"/>
+            <input variable="scanEyes"/>
+            <if expression="scanEyes == True">
+                <then>
+                    <comment text="V&#233;rifies si le scan r&#233;tinien est correct"/>
+                    <output expression="&quot;Scan r&#233;tinien reconnu&quot;" newline="True"/>
+                    <output expression="&quot;Vous pouvez passer au prochain niveau de s&#233;curit&#233;&quot;" newline="True"/>
+                    <assign variable="etat" expression="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;[Erreur] &gt;&gt; Scan r&#233;tinien non reconnu&quot;" newline="True"/>
+                    <assign variable="etat" expression="False"/>
+                </else>
+            </if>
+        </body>
+    </function>
+    <function name="MA4" type="Boolean" variable="etat">
+        <parameters/>
+        <body>
+            <declare name="scanDigital" type="Boolean" array="False" size=""/>
+            <declare name="etat" type="Boolean" array="False" size=""/>
+            <output expression="&quot;Veuillez approchez votre doigt du capteur&quot;" newline="True"/>
+            <input variable="scanDigital"/>
+            <if expression="scanDigital == True">
+                <then>
+                    <comment text="V&#233;rifies si le scan digital est correct"/>
+                    <output expression="&quot;Scan digital reconnu&quot;" newline="True"/>
+                    <output expression="&quot;Vous pouvez passer au prochain niveau de s&#233;curit&#233;&quot;" newline="True"/>
+                    <assign variable="etat" expression="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;[Erreur] &gt;&gt; Scan digital non reconnu&quot;" newline="True"/>
+                    <assign variable="etat" expression="False"/>
+                </else>
+            </if>
+        </body>
+    </function>
+    <function name="Modexp" type="Integer" variable="r">
+        <parameters>
+            <parameter name="a" type="Integer" array="False"/>
+            <parameter name="clePublique" type="Integer" array="False"/>
+            <parameter name="n" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="r" type="Integer" array="False" size=""/>
+            <if expression="clePublique &lt; 0">
+                <then>
+                    <call expression="exit(-1)"/>
+                </then>
+                <else/>
+            </if>
+            <if expression="(a == 0 || n == 1)">
+                <then>
+                    <assign variable="r" expression="0"/>
+                </then>
+                <else>
+                    <assign variable="r" expression="1"/>
+                    <while expression="clePublique &gt; 0">
+                        <assign variable="r" expression="(r * (a mod n)) mod n"/>
+                        <assign variable="clePublique" expression="clePublique - 1"/>
+                    </while>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
